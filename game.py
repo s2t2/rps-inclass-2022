@@ -24,15 +24,15 @@ print("USER CHOSE:", u)
 # https://www.geeksforgeeks.org/python-select-random-value-from-a-list/
 # https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/random.md
 
-
-import random
+#import random
+from random import choice
 
 options = ["rock", "paper", "scissors"]
 
-computer_choice = random.choice(options)
+#computer_choice = random.choice(options)
+computer_choice = choice(options)
 
 print("COMPUTER CHOSE:", computer_choice)
-
 
 
 
