@@ -10,9 +10,9 @@
 # ASK FOR USER INPUT
 
 
-u = input("Please choose one of: 'rock', 'paper', 'scissors': ")
+user_choice = input("Please choose one of: 'rock', 'paper', 'scissors': ")
 
-print("USER CHOSE:", u)
+print("USER CHOSE:", user_choice)
 
 
 # VALIDATIONS
@@ -40,6 +40,26 @@ print("COMPUTER CHOSE:", computer_choice)
 
 # DETERMINE THE WINNER
 
+# option a) nested IF statements
+# adapted from eugenie in Slack
+
+if user_choice == computer_choice:
+    print("Both players played", user_choice, "It's a tie!")
+elif user_choice == "paper":
+    if computer_choice == "rock":
+        print("Paper covers rock. You won!")
+    else:
+        print("Scissors cuts paper. You lost! It's ok.")
+elif user_choice == "scissors":
+    if computer_choice == "paper":
+        print("Scissors cuts paper. You won!")
+    else:
+        print("Rock crushes scissors. You lost! It's ok.")
+elif user_choice == "rock":
+    if computer_choice == "scissors":
+        print("Rock crushes scissors. You won!")
+    else:
+        print("Paper covers rock You lost! It's ok.")
 
 
 # FINAL RESULTS
